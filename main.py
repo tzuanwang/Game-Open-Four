@@ -3,6 +3,6 @@ from game import Game
 from player import Player
 from board import Board
 
-board = Board(6, 7)
-game = Game(board, 4, 2)
+board = Board(7, 8)
+game = Game(board, 6, 2)
 game.play()

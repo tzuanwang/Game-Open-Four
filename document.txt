@@ -16,3 +16,14 @@
 
 # Design
 
+1. Disk Class
+2. Board Class
+3. Player Class
+4. Game Class
+
+# Optimization
+1. Customized Player Name
+2. PlacePiece Handling
+3. Restart Game Features
+4. Place "PlacePice" & "CheckWin" in Game class
+5. Split "CheckWin" into 5 functions (vertically, horizontally, diagonally, anti-diagonally)

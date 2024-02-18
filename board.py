@@ -23,7 +23,7 @@ class Board:
         if column < 0 or column >= self._cols:
             raise ValueError('Invalid column')
         if disk == Disk.EMPTY:
-            raise ValueError('Invalid piece')
+            raise ValueError('Invalid disk')
         for row in range(self._rows-1, -1, -1):
             if self._board[row][column] == Disk.EMPTY:
                 self._board[row][column] = disk
