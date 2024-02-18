@@ -11,6 +11,8 @@ class Board:
     def InitBoard(self, rows: int, cols: int):
         return [[Disk.EMPTY for _ in range(self._cols)] for _ in range(self._rows)]
     
+    def GetBoard(self):
+        return self._board
     
     def DisplayBoard(self):
         for row in range(len(self.board)-1,-1,-1):
