@@ -1,0 +1,18 @@
+# Some possible questions to ask:
+
+1. What are the rules of the game?
+2. What size is the grid?
+3. How many players are there? Player vs Computer? Player vs Player?
+4. Are we keeping track of the score?
+
+# Game Description
+
+1. The game will be played by only two players, player vs player
+2. The game board should be of variable dimensions
+3. The target is to connect N discs in a row (vertically, horizontally or diagonally)
+4. N is a variable (e.g. connect 4, 5, 6, etc)
+5. There should be a score tracking system
+6. After a player reaches the target score, they are the winner
+
+# Design
+
