@@ -5,10 +5,8 @@ class Player:
         self._name = name
         self._color = color
 
-    @property
     def GetName(self):
         return self._name
     
-    @property
     def GetColor(self):
         return self._color

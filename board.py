@@ -7,29 +7,26 @@ class Board:
         self._board = None
         self.InitBoard()
 
-    @staticmethod
     def InitBoard(self):
         self._board = [[Disk.EMPTY for _ in range(self._cols)] for _ in range(self._rows)]
     
     def DisplayBoard(self):
         return self._board
     
-    @property
     def GetRows(self):
         return self._rows
     
-    @property
     def GetColumns(self):
         return self._cols
     
-    def placePiece(self, column, piece):
+    def placePiece(self, column, disk):
         if column < 0 or column >= self._cols:
             raise ValueError('Invalid column')
-        if piece == Disk.EMPTY:
+        if disk == Disk.EMPTY:
             raise ValueError('Invalid piece')
         for row in range(self._rows-1, -1, -1):
             if self._board[row][column] == Disk.EMPTY:
-                self._board[row][column] = piece
+                self._board[row][column] = disk
                 return row
 
     def checkWin(self, connectN, row, col, disk):
@@ -57,7 +54,7 @@ class Board:
         count = 0
         for r in range(self._rows):
             c = row + col - r
-            if c >= 0 and c < self._cols and self.board[r][c] == disk:
+            if c >= 0 and c < self._cols and self._board[r][c] == disk:
                 count += 1
             else:
                 count = 0

@@ -25,12 +25,12 @@ class Game:
         board = self._board.DisplayBoard()
         for i in range(len(board)):
             row = ''
-            for piece in board[i]:
-                if piece == Disk.EMPTY:
+            for disk in board[i]:
+                if disk == Disk.EMPTY:
                     row += '0 '
-                elif piece == Disk.YELLOW:
+                elif disk == Disk.YELLOW:
                     row += 'Y '
-                elif piece == Disk.RED:
+                elif disk == Disk.RED:
                     row += 'R '
             print(row)
         print('')
@@ -57,8 +57,8 @@ class Game:
         winner = None
         while maxScore < self._targetScore:
             winner = self.playRound()
-            print(f"{winner.GetName()} won the round")
-            maxScore = max(self._score[winner.getName()], maxScore)
+            print(f"{winner.GetName()} won the round 🔥")
+            maxScore = max(self._score[winner.GetName()], maxScore)
 
             self._board.InitBoard() # reset grid
-        print(f"{winner.GetName()} won the game")
+        print(f"{winner.GetName()} won the game 🎉")
