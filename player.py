@@ -1,14 +1,14 @@
 import enum
 
 class Player:
-    def __init__(self, name: str, diskColor: enum):
+    def __init__(self, name: str, color: enum):
         self._name = name
-        self._diskColor = diskColor
+        self._color = color
 
     @property
-    def getName(self):
+    def GetName(self):
         return self._name
     
     @property
-    def getDiskColor(self):
-        return self._diskColor
+    def GetColor(self):
+        return self._color
